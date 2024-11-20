@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drone Research Table</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+        }
+        .fixed-logos {
+            position: fixed;
+            top: 10px;
+            right: 10px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            z-index: 1000;
+        }
+        .fixed-logos img {
+            max-width: 60px;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            background-color: white;
+            padding: 5px;
+            transition: transform 0.2s ease-in-out;
+        }
+        .fixed-logos img:hover {
+            transform: scale(1.1);
+        }
+        .header h1 {
+            font-size: 2rem;
+            color: #333;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        table {
+            background: white;
+        }
+    </style>
+</head>
+<body>
+    <!-- Fixed logos -->
+    <div class="fixed-logos">
+        <a href="https://www.ufpi.br/" target="_blank">
+            <img src="img/ufpi.png" alt="Logo UFPI">
+        </a>
+        <a href="https://unicamp.br/" target="_blank">
+            <img src="img/unicamp.png" alt="Logo UNICAMP">
+        </a>
+        <a href="https://iuresf.gitlab.io/pasid-site/" target="_blank">
+            <img src="img/pasidLogo.png" alt="Logo PASID">
+        </a>
+    </div>
+
+    <div class="container my-4">
+        <div class="header">
+            <h1>Categorization of each paper</h1>
+        </div>
+        <input id="search" type="text" class="form-control my-3" placeholder="Search in table...">
+        <table id="data-table" class="table table-striped table-bordered">
+            <thead>
+                <tr>
+                    <th>ID</th><th>Title</th><th>Delivery Type</th><th>Contribution</th><th>Metrics</th><th>Collison Type</th><th>Evaluation Methods</th><th>Collison Cause</th><th>Method of Deviation</th><th>Research Challenges</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td>1</td><td>Collisionless Fast Pattern Formation Mechanism for Dynamic Number of UAVs</td><td>No specific context</td><td>Dynamic Trajectory Planning</td><td>Pattern formation time, Collision prevention rate, Number of drones</td><td>Between drones</td><td>Simulation</td><td>Simultaneous Multiple Drones, Response Time, Static Trajectory Planning</td><td>Time-Interleaved Pattern Formation Mechanism (TIPF), Centralized Coordinate Calculation Algorithm (CCC)</td><td>Collision Prevention and Safety, Drone Scalability and Density</td></tr>
+                <tr><td>2</td><td>Blockchain-Powered Policy Enforcement for Ensuring Flight Compliance in Drone-Based Service Systems</td><td>Commercial</td><td>Dynamic Trajectory Planning</td><td>Service delivery time, Privacy violation percentage, Validation time for transactions</td><td>Between drones</td><td>Simulation</td><td>Simultaneous Multiple Drones, Speed Adjustment</td><td>Altitude and Speed Policies, Route Planning</td><td>Collision Prevention and Safety</td></tr>
+                <tr><td>3</td><td>Drones in the Big City: Autonomous Collision Avoidance for Aerial Delivery Services</td><td>Commercial</td><td>Collision Prevention Strategy</td><td>Collision rate, Duration of successful trips, Number of drones collided per collision event, Number of drones collided per route deviation</td><td>Between drones and with objects</td><td>Simulation and Modeling</td><td>Inadequate Evasion Decisions, Simultaneous Multiple Drones, Obstacles</td><td>SingleDrone, MultiDrone, SpeedDrone</td><td>Drone Scalability and Density</td></tr>
+                <tr><td>4</td><td>Medrone</td><td>Health</td><td>Autonomous Drone Navigation</td><td>Flight time and movement</td><td>Between drones and with objects</td><td>Experiment</td><td>Lack of Collision Prevention Systems, Obstacles</td><td>Ultrasonic Sensors</td><td>Navigation Challenges and Complex Environments, Maneuverability and Flight Control</td></tr>
+                <tr><td>5</td><td>Congestion-Aware Multi-Drone Delivery Routing Framework</td><td>Commercial</td><td>Framework</td><td>Energy, Speed</td><td>Between drones and with objects</td><td>Simulation</td><td>Lack of Trajectory Planning, Simultaneous Multiple Drones, Obstacles, Lack of Collision Prevention Systems</td><td>Negotiated Congestion Algorithm (NC)</td><td>Collision Prevention and Safety, Energy and Batteries</td></tr>
+                <tr><td>6</td><td>Drone Navigation Using Region and Edge Exploitation-Based Deep CNN</td><td>Commercial</td><td>Architecture</td><td>Collision Probability</td><td>With Objects</td><td>Experiment</td><td>Obstacles</td><td>Region-and-Edge-Based Deep Convolutional Neural Network (Drone-STM-RENet)</td><td>Navigation Challenges and Complex Environments</td></tr>
+                <tr><td>7</td><td>A Collision-Free Path Planning Algorithm for Unmanned Aerial Vehicle Delivery</td><td>Commercial</td><td>Dynamic Trajectory Planning</td><td>Route time, Success rate, Average delay time</td><td>Between drones and with objects</td><td>Simulation</td><td>Lack of Trajectory Planning, Simultaneous Multiple Drones, Obstacles</td><td>Heuristic Function, CurrentSchedule</td><td>Energy and Batteries, Airspace Restrictions and Rules</td></tr>
+                <tr><td>8</td><td>Tangent-Based Path Planning for UAV in a 3-D Low Altitude Urban Environment</td><td>Commercial</td><td>Dynamic Trajectory Planning</td><td>Path length per case, Time consumption per case, Risk cost per case</td><td>With Objects</td><td>Simulation</td><td>Obstacles, Mobility Constraints</td><td>3D Tangent Method, Speed Obstacle Incorporation</td><td>Maneuverability and Flight Control</td></tr>
+                <tr><td>9</td><td>UAV Threat Level Assessment based on the Velocity and Distance from Collision</td><td>No specific context</td><td>Collision Prevention Strategy</td><td>Speed</td><td>With Objects</td><td>Simulation</td><td>Speed Adjustment, Obstacles</td><td>Doppler Sensors</td><td>Route Planning and Optimization</td></tr>
+                <tr><td>10</td><td>Vision-Based Obstacle Avoidance in Drone Navigation using Deep Reinforcement Learning</td><td>No specific context</td><td>Architecture</td><td>Flight Success</td><td>With Objects</td><td>Simulation</td><td>Manual Trajectory Planning, Obstacles</td><td>Deep Reinforcement Learning (DRL)</td><td>Navigation Challenges and Complex Environments</td></tr>
+                <tr><td>10</td><td>Vision-Based Obstacle Avoidance in Drone Navigation using Deep Reinforcement Learning</td><td>No specific context</td><td>Architecture</td><td>Flight success</td><td>With objects</td><td>Simulation</td><td>Manual trajectory planning, Obstacles</td><td>Deep Reinforcement Learning (DRL)</td><td>Navigation Challenges and Complex Environments</td></tr>
+                <tr><td>11</td><td>Coordinated Dense Aerial Traffic with Self-Driving Drones</td><td>Commercial</td><td>Collision Prevention Strategy</td><td>Traffic flow</td><td>Between drones</td><td>Simulation and Experiment</td><td>Simultaneous Multiple Drones, Speed Adjustment, Obstacles</td><td>Anisotropic Repulsion, Agile Self-Driving, Selective Alignment</td><td>Drone Scalability and Density</td></tr>
+                <tr><td>12</td><td>Path Planning for Drone Delivery in Dense Building Environments</td><td>Commercial</td><td>Static Trajectory Planning</td><td>Convergence rate</td><td>With objects</td><td>Simulation</td><td>Obstacles</td><td>Ant Colony Optimization Algorithm (ACO), Rapidly Exploring Random Tree (RRT)</td><td>Navigation Challenges and Complex Environments</td></tr>
+                <tr><td>13</td><td>Collaborative Truck Multi-Drone Delivery System Considering Drone Scheduling and En Route Operations</td><td>Commercial</td><td>Dynamic Trajectory Planning</td><td>Delivery completion time, Total delivery cost, Drone recovery time undefined for truck stops</td><td>With objects</td><td>Simulation</td><td>Load Capacity, Lack of Trajectory Planning</td><td>Scheduling Decisions</td><td>Logistics and Operational Decisions</td></tr>
+                <tr><td>14</td><td>Planning Deliveries with UAV Routing under Weather Forecast and Energy Consumption Constraints</td><td>No specific context</td><td>Collision Prevention Strategy</td><td>Load, Energy, and Speed</td><td>With objects</td><td>Simulation</td><td>Load Capacity, Lack of Trajectory Planning, Speed Adjustment, Obstacles</td><td>Forecasting, Offline Planning</td><td>Route Planning and Optimization</td></tr>
+                <tr><td>15</td><td>Automated Aerial Suspended Cargo Delivery Through Reinforcement Learning</td><td>Commercial</td><td>Static Trajectory Planning</td><td>Load, Spectral Power Density</td><td>With objects</td><td>Simulation and Experiment</td><td>Load Capacity, Obstacles</td><td>Movement Planning, Reinforcement Learning Agent</td><td>Traffic Management and Coordination</td></tr>
+                <tr><td>16</td><td>Optimization of Trucks and Drones in Tandem Delivery Network with Drone Trajectory Planning</td><td>Commercial</td><td>Static Trajectory Planning</td><td>Number of drones, Distance between drones, Collision prevention time</td><td>With objects</td><td>Simulation and Modeling</td><td>Lack of Trajectory Planning, Simultaneous Multiple Drones</td><td>Trajectory Planning, Collision Region</td><td>Collision Prevention and Safety, Energy and Batteries</td></tr>
+                <tr><td>17</td><td>Broadcast Transponders for Low-Flying Unmanned Aerial Vehicles</td><td>Commercial</td><td>Collision Prevention Strategy</td><td>Reliability</td><td>Between drones</td><td>Simulation</td><td>Simultaneous Multiple Drones, Obstacles</td><td>ADS-B Transponder System, Cooperative System</td><td>Interference Management and Communication</td></tr>
+                <tr><td>18</td><td>FFP: A Force Field Protocol for the Tactical Management of UAV Conflicts</td><td>No specific context</td><td>Collision Prevention Strategy</td><td>Distance to waypoint, Distance between drones</td><td>Between drones and with objects</td><td>Simulation</td><td>Load Capacity, Lack of Trajectory Planning, Obstacles</td><td>Force Field Protocol (FFP)</td><td>Maneuverability and Flight Control</td></tr>
+                <tr><td>19</td><td>Consensus-Based Virtual Leader Tracking Swarm Algorithm with GDRRT*-PSO for Path-Planning of Multiple-UAVs</td><td>Commercial</td><td>Dynamic Trajectory Planning</td><td>Time to destination, Formation control during flight, Communication loss</td><td>Between drones and with objects</td><td>Simulation</td><td>Technical Failures, Lack of Trajectory Planning, Obstacles</td><td>GDRRT-PSO Algorithm</td><td>Traffic Management and Coordination</td></tr>
+                <tr><td>20</td><td>Preliminary Damage Severity Evaluation of Ground Vehicles and Covered Walkways under Collision with a Small Unmanned Aerial Vehicle (sUAV)</td><td>No specific context</td><td>Collision Prevention Strategy</td><td>Collision speed variations, Impact force</td><td>Between drones and with objects</td><td>Simulation</td><td>Technical Failures, Simultaneous Multiple Drones</td><td>Finite Element Method (FEM)</td><td>Collision Prevention and Safety</td></tr>
+                <tr><td>21</td><td>Autonomous Drone Interception with Deep Reinforcement Learning</td><td>Commercial</td><td>Collision Prevention Strategy</td><td>Interception success rate, Attacker influence area, Speed variations</td><td>Between drones</td><td>Simulation</td><td>Speed Adjustment</td><td>ACAS-Xu System</td><td>Navigation Challenges and Complex Environments</td></tr>
+                <tr><td>22</td><td>Path Planning and Collision Risk Management Strategy for Multi-UAV Systems in 3D Environments</td><td>Commercial</td><td>Collision Prevention Strategy</td><td>Total number of collisions, Number of completed missions per drone, Total number of completed missions by many drones</td><td>Between drones</td><td>Simulation</td><td>Lack of Trajectory Planning, Simultaneous Multiple Drones</td><td>Speed Control, Flight Levels</td><td>Collision Prevention and Safety, Traffic Management and Coordination</td></tr>
+                <tr><td>23</td><td>Drone-Drone Collisions over New York City via the Kinetic Theory of Gases</td><td>Commercial</td><td>Collision Prevention Strategy</td><td>Collision Rate Per Day (CPD), Encounter Rate Per Day (EPD)</td><td>Between drones</td><td>Simulation and Modeling</td><td>Lack of Trajectory Planning, Simultaneous Multiple Drones</td><td>Unmanned Aircraft Traffic Management (UTM)</td><td>Collision Prevention and Safety</td></tr>
+                <tr><td>24</td><td>Low-Cost Collision Avoidance in Microverse for Unmanned Aerial Vehicle Delivery Networks</td><td>Commercial</td><td>Collision Prevention Strategy</td><td>GPS Deviation, Round-Trip Delay (RTD), Safe Distance (Dsafe)</td><td>Between drones and with objects</td><td>Simulation and Experiment</td><td>Simultaneous Multiple Drones</td><td>LoCASM (Low-Cost Collision Avoidance Scheme in Microverse)</td><td>Drone Scalability and Density, Interference Management and Communication</td></tr>
+                <tr><td>25</td><td>Systemic Performance Analysis on Zoning for Unmanned Aerial Vehicle-Based Service Delivery</td><td>Commercial</td><td>Collision Prevention Strategy</td><td>Minimum distance between drones, Response time</td><td>Between drones</td><td>Simulation</td><td>Lack of Trajectory Planning, Simultaneous Multiple Drones</td><td>Zoning</td><td>Navigation Challenges and Complex Environments, Traffic Management and Coordination</td></tr>
+                <tr><td>26</td><td>Drone-Fleet-Enabled Logistics: A Joint Design of Flight Trajectory and Package Delivery</td><td>Commercial</td><td>Collision Prevention Strategy</td><td>Total Value of Delivered Packages</td><td>Between drones</td><td>Simulation</td><td>Load Capacity, Lack of Trajectory Planning, Obstacles</td><td>Trajectory Planning</td><td>Route Planning and Optimization, Airspace Restrictions and Rules</td></tr>
+                <tr><td>27</td><td>Clothoid-Based Path Planning for a Formation of Fixed-Wing UAVs</td><td>No specific context</td><td>Static Trajectory Planning</td><td>Number of UAVs, Speed Variations</td><td>Between drones</td><td>Simulation</td><td>Lack of Trajectory Planning, Speed Adjustment, Obstacles</td><td>Trajectory Planning</td><td>Route Planning and Optimization</td></tr>
+                <tr><td>28</td><td>A 3D Vision Cone-Based Method for Collision-Free Navigation of a Quadcopter UAV Among Moving Obstacles</td><td>No specific context</td><td>Dynamic Trajectory Planning</td><td>Minimum distance between drones and obstacles</td><td>With objects</td><td>Simulation</td><td>Obstacles</td><td>3D Vision Cone Algorithm</td><td>Navigation Challenges and Complex Environments</td></tr>
+                <tr><td>29</td><td>Deployment of Battery Swapping Stations for Unmanned Aerial Vehicles Subject to Cyclic Production Flow Constraints</td><td>Commercial</td><td>Dynamic Trajectory Planning</td><td>Energy Consumption</td><td>Between drones</td><td>Modeling</td><td>Battery Load, Simultaneous Multiple Drones</td><td>Trajectory Planning</td><td>Traffic Management and Coordination</td></tr>
+                <tr><td>30</td><td>Coordinated Dense Aerial Traffic with Self-Driving Drones</td><td>Commercial</td><td>Collision Prevention Strategy</td><td>Delivery Time, Speed Variation, Resource Utilization</td><td>Between drones</td><td>Modeling and Simulation</td><td>Speed Adjustment, Simultaneous Multiple Drones</td><td>Anisotropic Repulsion, Agile Self-Driving, Selective Alignment, Radial Queue</td><td>Navigation Challenges and Complex Environments, Traffic Management and Coordination, Drone Scalability and Density</td></tr>
+                <tr><td>31</td><td>Declarative UAV Fleet Mission Planning: A Dynamic VRP Approach</td><td>Commercial</td><td>Dynamic Trajectory Planning</td><td>Service Level, Throughput</td><td>Between drones</td><td>Modeling and Experiment</td><td>Lack of Collision Prevention Systems</td><td>Dynamic Evasion</td><td>Logistics and Operational Decisions</td></tr>
+                <tr><td>32</td><td>Analysis of the Possibility of Using Autonomous Aircraft to Deliver Parcels: Route Optimization</td><td>No specific context</td><td>Static Trajectory Planning</td><td>Energy Consumption, Delivery Time</td><td>Between drones</td><td>Modeling</td><td>Lack of Trajectory Planning</td><td>Trajectory Planning</td><td>Route Planning and Optimization, Energy and Batteries</td></tr>
+                <tr><td>33</td><td>Dynamic MAC Protocol Designed for UAV Collision Avoidance System</td><td>No specific context</td><td>Collision Prevention Strategy</td><td>Latency, Number of Collisions</td><td>Between drones</td><td>Simulation</td><td>Mobility Constraints</td><td>Rolling Maneuver, Missed Approach Maneuver</td><td>Logistics and Operational Decisions, Interference Management and Communication</td></tr>
+                <tr><td>34</td><td>Development of Cloud-Based UAV Monitoring and Management System</td><td>Commercial</td><td>Web Application</td><td>Latency, Utilization, Number of Drones, Response Time, Mission Time, Total Collisions</td><td>Between drones</td><td>Simulation</td><td>Lack of Collision Prevention Systems, Simultaneous Multiple Drones</td><td>Detection Algorithm, Safety Zones</td><td>Navigation Challenges and Complex Environments</td></tr>
+            </tbody>
+        </table>
+    </div>
+    <script>
+        $(document).ready(function() {
+            $("#search").on("keyup", function() {
+                var value = $(this).val().toLowerCase();
+                $("#data-table tbody tr").filter(function() {
+                    $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1);
+                });
+            });
+        });
+    </script>
+</body>
+</html>
